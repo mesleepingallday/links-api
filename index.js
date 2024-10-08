@@ -7,7 +7,7 @@ const Link = require("./models/link");
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
+app.get("/api/links", (req, res) => {
   Link.find({})
     .then((links) => {
       const styleHtml = `<style>
